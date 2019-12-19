@@ -1,0 +1,162 @@
+@import "normalize";
+@import "variables";
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  background-color: $brand-color;
+  @include font(1.4rem, $text-color, 400, $text-ff, 1);
+}
+
+.bg {
+  max-width: 800px;
+  height: 600px;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  margin: 50px auto;
+  position: relative;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  width: 690px;
+  height: 390px;
+  background-color: $brand-color;
+  margin: auto auto;
+  vertical-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.nike {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  &__item {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  &__logo {
+    display: block;
+  }
+  &__product {
+    margin: 70px 0 65px 20px;
+  }
+  &__dots {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__dot {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
+  }
+  &__dot--btn {
+    width: 9px;
+    height: 9px;
+    line-height: 13px;
+    border: none;
+    background-color: #2c3a63;
+    padding: 0;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    @include hover {
+      border-color: $border-color;
+      width: 16px;
+      height: 16px;
+      border: 2px solid $border-color;
+    }
+  }
+  &__info {
+    max-width: 30%;
+    margin: 65px 0 65px 80px;
+  }
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin: 0 0 12px 0;
+  }
+  &__subtitle {
+    font-size: 1.4rem;
+
+    font-weight: 100;
+    opacity: 0.5;
+  }
+  &__stars {
+    margin: 25px 0;
+  }
+}
+
+// Helpers
+.white {
+  background-color: #fff;
+}
+
+.red {
+  background-color: #ed3333;
+}
+
+.blue {
+  background-color: #29e3ea;
+}
+
+.fa-star {
+  font-size: 1rem;
+  color: #f7bf16;
+  cursor: pointer;
+  &--grey {
+    color: #9da1a6;
+  }
+}
+
+.fa-star:hover,
+.fa-star:focus,
+.fa-star:active {
+  color: #f7bf16;
+}
+
+select {
+  width: 70px;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: $b-size solid $border-color;
+  color: $text-color;
+  // opacity: 0.5;
+  outline: none;
+  background: url(../img/down-chevron.png) no-repeat right transparent;
+  -webkit-appearance: none;
+}
+
+.btn {
+  padding: 10px;
+  width: 185px;
+  color: $text-color;
+  background-color: #353e4e;
+  border: $b-size solid $border-color;
+  margin: 30px 0;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: rgba(53, 62, 78, 0.5);
+}

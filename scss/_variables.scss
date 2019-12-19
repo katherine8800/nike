@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Museo";
+  src: url("../fonts/museo/regular.eot");
+  src: url("../fonts/museo/regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/museo/regular.woff2") format("woff2"),
+    url("../fonts/museo/regular.woff") format("woff"),
+    url("../fonts/museo/regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$brand-color: #19263b;
+$text-color: #e1e1e1;
+$border-color: #4f5560;
+
+$b-size: 1px;
+
+$text-ff: "Museo", sans-serif;
